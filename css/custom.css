@@ -1,0 +1,4 @@
+.reveal section img[alt="utek logo"] {
+    max-height: 300px;
+    background: white;
+}
