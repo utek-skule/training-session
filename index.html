@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>UTEK2018 Programming</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -25,7 +25,163 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown="example.md" data-separator-vertical="^\r?\n--\r?\n$"></section>
+				<section data-markdown data-separator-vertical="^\r?\n--\r?\n$">
+					## UTEK 2018 Programming
+
+					![utek logo](resources/logo.svg)
+
+					2018-01-13 / 2018-01-14
+
+					---
+
+					### This year's competition will use:
+
+					- String processing
+					- Discrete optimization
+
+					---
+
+					### Before the competition
+
+					#### Required
+					- Register if you haven't
+					- Set up your developer environment (local, ECF, Google cloud)
+					- [Create a Github account](https://github.com/)
+
+					#### Optional
+					- [Install git](https://git-scm.com/downloads)
+					- [Create a Google cloud account. Required if you don't have ECF access](https://console.cloud.google.com/freetrial?page=0)
+
+					Note:
+					Github account required to ask questions: open an issue. I will also be tracking revision history of the competition package there
+					Ask who is not in engineering
+
+					--
+
+					### At the competition
+
+					You will need to create:
+					- A program (obviously), that will need to pass various test cases
+					- An 8 minute presentation
+					- Optional visualization component
+
+					---
+
+					### Optimization
+
+					What is discrete optimization?
+
+					What algorithms can we use?
+
+					Note:
+
+					Talk briefly about hill climbing and simulated annealing on the board
+					- Hill climbing
+					- Ant colony optimization
+					- Simulated annealing
+
+					--
+
+					### Exercise
+
+					You have a csv file (`exercises/optimization/terrain.txt`) containing a 100x100 2d array. Find the largest possible value in the array, inspecting fewer than 1000 values. Use one of the methods from before.
+
+					- Try using multiple seeds. Does this improve the results more than optimizing for longer?
+					- Now try finding the minimum value
+
+					Note:
+					The max is 0.492
+					The min is -0.246
+
+					---
+
+					### String Processing
+
+					Reading, breaking, creating, modifying strings
+
+					--
+
+					### Exercise: Pig Latin translator
+
+					igpay atinlay anslatortay
+					```
+					If the word begins with a consonant:
+					    [first consonant cluster][rest of word]
+					        -> [rest of word][first consonant cluster] + "ay"
+					    pig -> ig + p + ay
+					    train -> ain + tr + ay
+
+					Else:
+					    [word] -> [word] + "way"
+					    egg -> egg + way
+					```
+
+					--
+
+					### Exercise cont.
+
+					You have a list of input sentences (`exercises/string_processing/words.txt`). Write a program that outputs the pig latin translation of each.
+
+					- Carry any punctation e.g. `hello! -> ellohay`
+					- Carry the capitalization of each word (UPPER, Title or lower) e.g. `ONE two Three -> ONEWAY otway Eetray`
+					- Assume that "I" and "A" are in title case.
+
+					Note:
+					there are lots of weird cases that haven't been properly covered, but this is just an exercise
+
+
+					--
+
+					### Creating a Google Cloud account
+					- Go to the [Google cloud page](https://console.cloud.google.com/compute/instances)
+					- Create a project and an instance, using the default settings EXCEPT use an f1 instance (the free tier :) )
+					- Go to VM instances, click Connect. This will open an SSH shell
+					- You will need a credit card to set this up
+
+					Note:
+					People in engineering can leave if they are planning to use ECF
+
+					--
+
+					#### OS details
+					- Debian 6.3.0
+					- Python 2.7.13 and 3.5.3 are installed by default
+
+					#### Required
+					- Install git with `sudo apt-get install git`
+
+					If you install anything else, you must provide installation instructions so that I can reproduce your results.
+
+					--
+
+					- You can sync your files to the VM using:
+					    - Git (recommended)
+					    - Or you can use [Google's cloud storage](https://cloud.google.com/storage/docs/object-basics)
+
+					- Documentation
+					    - https://cloud.google.com/compute/docs/instances/create-start-instance
+					    - https://cloud.google.com/compute/docs/instances/connecting-to-instance
+
+					--
+
+					Exercise:
+
+					Create an instance and install git. Then clone this repo.
+
+					`git clone https://github.com/utek-2018/training-session.git`
+
+					Note:
+					The competition package will be uploaded to this project
+
+					---
+
+					## Questions?
+
+					---
+
+					### See you at Mars
+					2018-01-13T09:30
+				</section>
 			</div>
 		</div>
 

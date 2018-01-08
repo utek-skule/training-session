@@ -1,0 +1,14 @@
+pig
+piglet
+train
+translation
+egg
+each
+psychology
+yes
+yttrium
+strength
+
+this sentence has lots of words
+punctuation. should! (be) carried.
+Carry capitalization IF it Is in the source
